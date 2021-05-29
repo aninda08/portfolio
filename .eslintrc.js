@@ -45,6 +45,16 @@ module.exports = {
       },
     ],
     'prettier/prettier': ['error', { endOfLine: 'auto' }],
+    'react/react-in-jsx-scope': 'off',
+    'react/require-default-props': 'off',
+    'react/function-component-definition': [
+      'error',
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
+    'react/forbid-dom-props': ['error', { forbid: ['style'] }], //better to turn on for strict linting
     'unicorn/filename-case': [
       'error',
       {
