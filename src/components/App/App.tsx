@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { APP_NAME, VERSION } from '../../constants/application';
+import { APP_NAME, VERSION } from 'const/application';
+import logo from './logo.svg';
 
 function App() {
   return (

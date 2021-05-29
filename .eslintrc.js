@@ -8,6 +8,42 @@ module.exports = {
   ],
   rules: {
     'import/no-namespace': 'error',
+    'import/no-relative-parent-imports': 'error',
+    'import/no-anonymous-default-export': [
+      'error',
+      {
+        allowArray: true,
+        allowArrowFunction: false,
+        allowAnonymousClass: false,
+        allowAnonymousFunction: false,
+        allowCallExpression: true, // The true value here is for backward compatibility
+        allowLiteral: true,
+        allowObject: true,
+      },
+    ],
+    'import/order': [
+      'error',
+      {
+        pathGroups: [
+          {
+            pattern: 'constants/**',
+            group: 'external',
+            position: 'after',
+          },
+          {
+            pattern: 'components/**',
+            group: 'external',
+            position: 'after',
+          },
+          {
+            pattern: 'helpers/**',
+            group: 'external',
+            position: 'after',
+          },
+        ],
+        pathGroupsExcludedImportTypes: ['builtin'],
+      },
+    ],
     'prettier/prettier': ['error', { endOfLine: 'auto' }],
     'unicorn/filename-case': [
       'error',
