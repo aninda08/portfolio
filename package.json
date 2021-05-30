@@ -24,7 +24,8 @@
     "lint": "eslint src --ext js,jsx,ts,tsx",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier --write \"{,!(node_modules)/**/}*.js\"",
-    "validate": "tsc -p . --noEmit"
+    "validate": "tsc -p . --noEmit",
+    "prepare": "husky install"
   },
   "browserslist": {
     "production": [
@@ -50,6 +51,11 @@
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-unicorn": "^32.0.1",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
     "prettier": "^2.3.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix"
   }
 }

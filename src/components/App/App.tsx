@@ -9,6 +9,7 @@ const App = () => (
       <p>
         Starting <code>{APP_NAME}</code> {VERSION}.
       </p>
+      <p>Building a awesome portfolio</p>
     </header>
   </div>
 );
